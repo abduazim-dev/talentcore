@@ -3,9 +3,9 @@ const navlinks: string[] = ["Imkoniyatlar", "Qanday ishlaydi", "Narxlar", "FAQ"]
 const Nav = () => {
     return (
         <nav className="px-24 py-4 flex justify-between items-center">
-            <span className="text-[22px] font-bold bg-linear-to-r from-[#3B82F6] to-[#818CF8] bg-clip-text text-transparent">
+            <a href="#" className="text-[22px] font-bold bg-linear-to-r from-[#3B82F6] to-[#818CF8] bg-clip-text text-transparent">
                 TalentCore
-            </span>
+            </a>
             <div className="flex gap-8">
                 {navlinks.map((link) => (
                     <a className="text-[#7A8A9E] hover:text-white transition" href="#" key={link}>{link}</a>
