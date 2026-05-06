@@ -1,25 +1,38 @@
 @import "tailwindcss";
 
-@keyframes fadeUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
+@theme {
+    /* Gradient */
+    --background-image-custom-gradient: linear-gradient(130deg,
+            rgba(99, 102, 241, 0.12) 0%,
+            rgba(59, 130, 246, 0.08) 50%,
+            rgba(139, 92, 246, 0.1) 100%);
+
+    /* Animatsiyalar - v4 da @theme ichida bo'lishi shart */
+    @keyframes fadeUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+    @keyframes float {
 
-@keyframes float {
+        0%,
+        100% {
+            transform: translateY(0);
+        }
 
-    0%,
-    100% {
-        transform: translateY(0);
+        50% {
+            transform: translateY(-12px);
+        }
     }
 
-    50% {
-        transform: translateY(-12px);
-    }
+    /* Animatsiyalarni klass sifatida ro'yxatdan o'tkazish (ixtiyoriy, lekin qulay) */
+    --animate-fade-up: fadeUp 0.7s ease forwards;
+    --animate-float: float 3s ease-in-out infinite;
 }

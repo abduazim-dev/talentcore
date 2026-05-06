@@ -76,13 +76,13 @@ const EarlyAccess = () => {
     if (!mounted) return null
 
     return (
-        <section className="max-w-[1200px] mx-auto px-4 py-12">
-            <div className="p-6 md:p-14 border rounded-2xl border-[#6366F14D] bg-[#0A0A0A] relative overflow-hidden">
+        <section className="max-w-[1200px] mx-auto px-4 py-42">
+            <div className="p-6 md:p-14 border rounded-2xl border-[#6366F14D] bg-custom-gradient relative overflow-hidden">
                 {/* Background Glow - Dizaynni boyitish uchun */}
                 <div className="absolute top-0 right-0 w-64 h-64 bg-[#F59E0B10] blur-[100px] rounded-full -mr-32 -mt-32"></div>
 
                 {/* Badge */}
-                <div className="px-4 py-1.5 items-center gap-2 inline-flex rounded-full border border-[#F59E0B] animate-[fadeUp_0.7s_ease_forwards]">
+                <div className="px-4 py-1.5 items-center gap-2 inline-flex rounded-full border border-[#F59E0B] animate-fade-up">
                     <span className="w-2 h-2 rounded-full bg-[#F59E0B] animate-pulse"></span>
                     <span className="text-[#F59E0B] text-[10px] md:text-xs font-bold tracking-widest uppercase">🎁 Early Access Bonuslar</span>
                 </div>
