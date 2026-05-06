@@ -1,14 +1,18 @@
 @import "tailwindcss";
 
 @theme {
-    /* Gradient */
+    /* 1. Gradient uchun maxsus o'zgaruvchi */
     --background-image-custom-gradient: linear-gradient(130deg,
             rgba(99, 102, 241, 0.12) 0%,
             rgba(59, 130, 246, 0.08) 50%,
             rgba(139, 92, 246, 0.1) 100%);
 
-    /* Animatsiyalar - v4 da @theme ichida bo'lishi shart */
-    @keyframes fadeUp {
+    /* 2. Animatsiyalarni e'lon qilish */
+    --animate-fade-up: fade-up 0.7s ease forwards;
+    --animate-float: float 3s ease-in-out infinite;
+
+    /* 3. Keyframelar - v4 da @theme ichida to'g'ridan-to'g'ri ishlashi mumkin */
+    @keyframes fade-up {
         from {
             opacity: 0;
             transform: translateY(20px);
@@ -31,8 +35,4 @@
             transform: translateY(-12px);
         }
     }
-
-    /* Animatsiyalarni klass sifatida ro'yxatdan o'tkazish (ixtiyoriy, lekin qulay) */
-    --animate-fade-up: fadeUp 0.7s ease forwards;
-    --animate-float: float 3s ease-in-out infinite;
 }
