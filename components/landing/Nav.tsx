@@ -61,7 +61,7 @@ const Nav = () => {
                 </ul>
 
                 <div className="flex gap-3 items-center">
-                    <div className="hidden md:flex">
+                    <div className="hidden md:flex items-center gap-4">
                         <a
                             href="/login"
                             className="text-[#7A8A9E] hover:text-white transition-colors duration-200 text-sm"
@@ -100,7 +100,6 @@ const Nav = () => {
                                 </a>
                             ))}
 
-                            {/* Kirish linki - boshqa linklar bilan bir xil masofada */}
                             <a
                                 href="/login"
                                 onClick={() => setIsOpen(false)}
@@ -109,8 +108,6 @@ const Nav = () => {
                                 Kirish
                             </a>
                         </div>
-
-                        {/* Asosiy tugma */}
                         <a
                             href="/register"
                             onClick={() => setIsOpen(false)}
