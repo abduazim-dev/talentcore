@@ -13,7 +13,7 @@ const steps: Step[] = [
         id: 2, label: "Avtomatik sinxronlash", icon: "🔄", descr: "Tizim avtomatik ravishda barcha bo'limlar, rollar va maosh ma'lumotlarini sinxronlaydi — real vaqt rejimida va xatosiz."
     },
     {
-        id: 3, label: "Maoshni avtomatlashtiring", icon: "💰", descr: "Soliq, ustama va chegirmalar avtomatik hisoblanadi — har oygi maosh jarayoni bir tugmada tugaydi."
+        id: 3, label: "Boshqaruvni qo'lga oling", icon: "🎯", descr: "Dashboard orqali xodimlar, maosh va hisobotlarni bir joydan kuzating — hamma narsa tayyor."
     }
 ]
 
