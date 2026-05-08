@@ -7,13 +7,13 @@ type Step = {
 
 const steps: Step[] = [
     {
-        id: 1, label: "Bir bosishli ro'yxatdan o'tish", icon: "🚀", descr: "Kompaniyangizni ro'yxatdan o'tkazing va bir tugma bilan barcha xodimlar ma'lumotlarini import qiling — Excel yoki CSV orqali."
+        id: 1, label: "Tezkor onboarding", icon: "🚀", descr: "Kompaniyangizni ro'yxatdan o'tkazing va bir tugma bilan barcha xodimlar ma'lumotlarini import qiling — Excel yoki CSV orqali."
     },
     {
-        id: 2, label: "Smart ma'lumotlar sinxronizatsiyasi", icon: "⚙️", descr: "Tizim avtomatik ravishda barcha bo'limlar, rollar va maosh ma'lumotlarini sinxronlaydi — real vaqt rejimida va xatosiz."
+        id: 2, label: "Avtomatik sinxronlash", icon: "🔄", descr: "Tizim avtomatik ravishda barcha bo'limlar, rollar va maosh ma'lumotlarini sinxronlaydi — real vaqt rejimida va xatosiz."
     },
     {
-        id: 3, label: "Avtomatlashtirilgan tahlil", icon: "📊", descr: "AI tahlili asosida to'lovlar, ta'til va KPI hisobotlari avtomatik tayyor — siz faqat qaror qabul qilasiz."
+        id: 3, label: "Maoshni avtomatlashtiring", icon: "💰", descr: "Soliq, ustama va chegirmalar avtomatik hisoblanadi — har oygi maosh jarayoni bir tugmada tugaydi."
     }
 ]
 
@@ -27,10 +27,9 @@ const Process = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 px-6 md:px-50 mt-16 gap-6">
                 {steps.map(step => (
                     <div
-                        className="relative flex flex-col items-center rounded-[20px] px-6 pt-10 pb-8 bg-[#FFFFFF08] border border-[#FFFFFF12] hover:border-[#3B82F6]/40 hover:bg-[#FFFFFF0D] transition-all duration-300"
+                        className="cursor-pointer relative flex flex-col items-center rounded-[20px] px-6 pt-10 pb-8 bg-[#FFFFFF08] border border-[#FFFFFF12] hover:border-[#3B82F6]/40 hover:bg-[#FFFFFF0D] transition-all duration-300"
                         key={step.id}
                     >
-                        {/* Qadam badge */}
                         <span className="absolute top-[-14px] bg-[linear-gradient(104.56deg,#3B82F6_0%,#6366F1_100%)] text-[11px] font-semibold px-3 py-1 uppercase rounded-full tracking-wider">
                             Qadam 0{step.id}
                         </span>
