@@ -168,9 +168,9 @@ const Opportunities = () => {
         <section className="text-center pt-30 px-4">
             <p className="text-[#60A5FA] text-sm font-semibold uppercase tracking-widest">Imkoniyatlar</p>
             <h1 className="text-[28px] sm:text-[41px] font-extrabold mt-2">Sizga kerakli barcha HR vositalar</h1>
-            <p className="text-[#7A8A9E] mt-4">Bir tizimda — maosh, ta'til, yollash, o'qish va ko'proq.</p>  {/* ✅ rang tuzatildi */}
+            <p className="text-[#7A8A9E] mt-4">Bir tizimda — maosh, ta'til, yollash, o'qish va ko'proq.</p>
 
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-5 mt-10 max-w-2xl mx-auto">  {/* ✅ responsive */}
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-5 mt-10 max-w-2xl mx-auto"> 
                 {opportunities.map(({ id, label }) => (
                     <button
                         key={id}
@@ -186,7 +186,6 @@ const Opportunities = () => {
                 ))}
             </div>
 
-            {/* Cards */}
             <div
                 key={activeTab}
                 className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-10 max-w-6xl mx-auto animate-fade-up"

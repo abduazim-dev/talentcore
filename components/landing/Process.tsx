@@ -34,7 +34,6 @@ const Process = () => {
                             Qadam 0{step.id}
                         </span>
 
-                        {/* Icon */}
                         <span className="w-16 h-16 text-2xl flex items-center justify-center bg-[#8B5CF61F] rounded-[18px] mb-5">
                             {step.icon}
                         </span>
