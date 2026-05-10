@@ -76,7 +76,7 @@ const EarlyAccess = () => {
     if (!mounted) return null
 
     return (
-        <section className="max-w-[1200px] mx-auto px-4 py-42">
+        <section className="max-w-[1200px] mx-auto px-4 pt-30">
             <div className="p-6 md:p-14 border rounded-2xl border-[#6366F14D] bg-custom-gradient relative overflow-hidden">
                 {/* Background Glow - Dizaynni boyitish uchun */}
                 <div className="absolute top-0 right-0 w-64 h-64 bg-[#F59E0B10] blur-[100px] rounded-full -mr-32 -mt-32"></div>

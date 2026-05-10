@@ -19,7 +19,7 @@ const steps: Step[] = [
 
 const Process = () => {
     return (
-        <section className="text-center py-24 px-6">
+        <section className="text-center pt-30 px-6">
             <p className="text-[#60A5FA] text-sm font-semibold uppercase tracking-widest">Jarayon</p>
             <h1 className="text-[41px] font-extrabold mt-2">3 qadamda ishni boshlang</h1>
             <p className="text-[#7A8A9E] mt-4">Murakkab sozlamalar yo'q. 15 daqiqada tayyorsiz.</p>
