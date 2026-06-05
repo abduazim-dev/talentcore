@@ -19,12 +19,12 @@ const steps: Step[] = [
 
 const Process = () => {
     return (
-        <section className="text-center pt-30 px-6">
+        <section id="jarayon" className="text-center pt-20 sm:pt-30 px-4 sm:px-6">
             <p className="text-[#60A5FA] text-sm font-semibold uppercase tracking-widest">Jarayon</p>
-            <h1 className="text-[41px] font-extrabold mt-2">3 qadamda ishni boshlang</h1>
+            <h2 className="text-[28px] sm:text-[41px] font-extrabold mt-2">3 qadamda ishni boshlang</h2>
             <p className="text-[#7A8A9E] mt-4">Murakkab sozlamalar yo'q. 15 daqiqada tayyorsiz.</p>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 px-6 md:px-50 mt-16 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 px-4 sm:px-12 md:px-24 lg:px-50 mt-12 sm:mt-16 gap-6">
                 {steps.map(step => (
                     <div
                         className="cursor-pointer relative flex flex-col items-center rounded-[20px] px-6 pt-10 pb-8 bg-[#FFFFFF08] border border-[#FFFFFF12] hover:border-[#3B82F6]/40 hover:bg-[#FFFFFF0D] transition-all duration-300"
@@ -38,7 +38,7 @@ const Process = () => {
                             {step.icon}
                         </span>
 
-                        <h2 className="font-bold text-xl mb-3">{step.label}</h2>
+                        <h3 className="font-bold text-xl mb-3">{step.label}</h3>
                         <p className="text-[#7A8A9E] text-sm leading-relaxed">{step.descr}</p>
                     </div>
                 ))}

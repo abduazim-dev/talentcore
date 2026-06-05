@@ -48,9 +48,7 @@ type TimeUnit = {
 }
 
 const EarlyAccess = () => {
-    const [mounted, setMounted] = useState(false)
     const [timeLeft, setTimeLeft] = useState<TimeLeft>({ days: 0, hours: 0, mins: 0 })
-    const [visible, setVisible] = useState(false)
     const sectionRef = useRef<HTMLElement>(null)
 
     const timeUnits: TimeUnit[] = [
@@ -60,12 +58,6 @@ const EarlyAccess = () => {
     ]
 
     useEffect(() => {
-        setMounted(true)
-    }, [])
-
-    useEffect(() => {
-        if (!mounted) return
-
         const tick = () => {
             const diff = DEADLINE.getTime() - Date.now()
             if (diff <= 0) return
@@ -76,34 +68,19 @@ const EarlyAccess = () => {
             })
         }
         tick()
-        const interval = setInterval(tick, 1000)
-
-        const observer = new IntersectionObserver(
-            ([entry]) => { if (entry.isIntersecting) setVisible(true) },
-            { threshold: 0 }
-        )
-        if (sectionRef.current) observer.observe(sectionRef.current)
-
-        return () => {
-            clearInterval(interval)
-            observer.disconnect()
-        }
-    }, [mounted])
-
-    if (!mounted) return null
+    })
 
     return (
         <section ref={sectionRef} className="max-w-[1200px] mx-auto px-4 pt-30">
             <div className="p-6 md:p-14 border rounded-2xl border-[#6366F14D] bg-custom-gradient relative overflow-hidden">
 
-                {/* Glow */}
                 <div className="absolute top-0 right-0 w-64 h-64 bg-[#F59E0B10] blur-[100px] rounded-full -mr-32 -mt-32 pointer-events-none" />
 
-                {/* Badge */}
+
                 <div
                     className={`px-4 py-1.5 items-center gap-2 inline-flex rounded-full border border-[#F59E0B]
                         transition-all duration-500
-                        ${visible ? "animate-fade-up" : "opacity-0 translate-y-4"}`}
+                        `}
                 >
                     <span className="w-2 h-2 rounded-full bg-[#F59E0B] animate-pulse" />
                     <span className="text-[#F59E0B] text-[10px] md:text-xs font-bold tracking-widest uppercase">
@@ -111,11 +88,11 @@ const EarlyAccess = () => {
                     </span>
                 </div>
 
-                {/* Header row */}
+
                 <div
                     className={`flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8 mt-8
                         transition-all duration-500 delay-100
-                        ${visible ? "animate-fade-up" : "opacity-0 translate-y-4"}`}
+                        `}
                 >
                     <div className="max-w-2xl">
                         <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight">
@@ -129,7 +106,7 @@ const EarlyAccess = () => {
                         </p>
                     </div>
 
-                    {/* Countdown */}
+
                     <div className="w-full lg:w-auto px-6 py-5 bg-[#00000066] backdrop-blur-md text-center border border-[#FBBF2433] rounded-2xl">
                         <span className="text-[#FCD34D] font-medium text-sm">🔥 Taklif tugashiga:</span>
                         <div className="flex mt-3 justify-center gap-2">
@@ -152,7 +129,7 @@ const EarlyAccess = () => {
                     </div>
                 </div>
 
-                {/* Bonus cards */}
+
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
                     {bonuses.map((bonus, index) => (
                         <div
@@ -160,8 +137,7 @@ const EarlyAccess = () => {
                             className={`group cursor-pointer p-6 flex flex-col rounded-2xl border border-[#FFFFFF14] bg-[#FFFFFF05]
                                 hover:border-[#F59E0B4D] hover:bg-[#F59E0B05]
                                 transition-all duration-500 hover:-translate-y-1
-                                ${visible ? "animate-fade-up" : "opacity-0 translate-y-6"}`}
-                            style={{ transitionDelay: visible ? `${200 + index * 100}ms` : "0ms" }}
+                                `}
                         >
                             <span className="text-5xl group-hover:scale-110 transition-transform duration-500 origin-left">
                                 {bonus.icon}
@@ -185,10 +161,9 @@ const EarlyAccess = () => {
                     ))}
                 </div>
 
-                {/* CTA Button */}
                 <div
                     className={`mt-12 flex justify-center transition-all duration-500 delay-500
-                        ${visible ? "animate-fade-up" : "opacity-0 translate-y-4"}`}
+                        `}
                 >
                     <button className="group relative bg-linear-to-r from-[#F59E0B] to-[#EF4444]
                         shadow-[0_0_20px_rgba(245,158,11,0.3)] hover:shadow-[0_0_30px_rgba(245,158,11,0.5)]

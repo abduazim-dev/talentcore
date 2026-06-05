@@ -8,9 +8,9 @@ interface NavLink {
 
 const NAV_LINKS: NavLink[] = [
     { label: "Imkoniyatlar", href: "#imkoniyatlar" },
-    { label: "Qanday ishlaydi", href: "#qanday-ishlaydi" },
+    { label: "Qanday ishlaydi", href: "#jarayon" },
     { label: "Narxlar", href: "#narxlar" },
-    { label: "FAQ", href: "#faq" },
+    { label: "Taqqoslash", href: "#taqqoslash" },
 ] as const;
 
 const GRADIENT_TEXT =

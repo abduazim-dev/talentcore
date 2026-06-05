@@ -1,16 +1,23 @@
 @import "tailwindcss";
 
+html{
+    scroll-behavior: smooth;
+}
+
 @theme {
     --background-image-custom-gradient: linear-gradient(130deg,
             rgba(99, 102, 241, 0.12) 0%,
             rgba(59, 130, 246, 0.08) 50%,
             rgba(139, 92, 246, 0.1) 100%);
 
-    /* 2. Animatsiyalarni e'lon qilish */
+    --background-image-custom-gradient-rgba: linear-gradient(101.44deg, #6366F1 0%, #8B5CF6 100%);
+
+    --background-image-custom-gradient-muted: linear-gradient(96.37deg, rgba(99, 102, 241, 0.12) 0%, rgba(139, 92, 246, 0.12) 100%);
+
     --animate-fade-up: fade-up 0.7s ease forwards;
     --animate-float: float 3s ease-in-out infinite;
 
-    
+
     @keyframes fade-up {
         from {
             opacity: 0;

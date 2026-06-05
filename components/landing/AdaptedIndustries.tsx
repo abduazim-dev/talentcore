@@ -18,38 +18,25 @@ const companyAdapted: Fields[] = [
 ]
 
 const AdaptedIndustries = () => {
-    const [visible, setVisible] = useState(false)
     const sectionRef = useRef<HTMLElement>(null)
-
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            ([entry]) => { if (entry.isIntersecting) setVisible(true) },
-            { threshold: 0.15 }
-        )
-        if (sectionRef.current) observer.observe(sectionRef.current)
-        return () => observer.disconnect()
-    }, [])
 
     return (
         <section ref={sectionRef} className="px-6 sm:px-16 lg:px-24 mt-40">
             {/* Header */}
             <p
-                className={`text-[#60A5FA] text-sm font-semibold uppercase tracking-widest transition-all duration-500
-                    ${visible ? "animate-fade-up" : "opacity-0 translate-y-4"}`}
+                className={`text-[#60A5FA] text-sm font-semibold uppercase tracking-widest transition-all duration-500`}
             >
                 Sohalarga moslashgan
             </p>
 
             <h1
-                className={`text-[28px] sm:text-[41px] font-extrabold mt-2 transition-all duration-500 delay-100
-                    ${visible ? "animate-fade-up" : "opacity-0 translate-y-4"}`}
+                className={`text-[28px] sm:text-[41px] font-extrabold mt-2 transition-all duration-500 delay-100`}
             >
                 Har bir sanoat uchun mo'ljallangan
             </h1>
 
             <p
-                className={`text-[#7A8A9E] max-w-lg mt-4 transition-all duration-500 delay-150
-                    ${visible ? "animate-fade-up" : "opacity-0 translate-y-4"}`}
+                className={`text-[#7A8A9E] max-w-lg mt-4 transition-all duration-500 delay-150`}
             >
                 Har bir soha o'ziga xos talablarga ega. TalentCore ularning hammasini qamrab oladi.
             </p>
@@ -62,8 +49,7 @@ const AdaptedIndustries = () => {
                         className={`group relative bg-[#FFFFFF08] border border-[#FFFFFF12] flex flex-col py-7 px-6 rounded-xl
                             cursor-pointer overflow-hidden
                             transition-all duration-500 hover:border-[#3B82F640] hover:bg-[#FFFFFF0F] hover:-translate-y-1
-                            ${visible ? "animate-fade-up" : "opacity-0 translate-y-6"}`}
-                        style={{ transitionDelay: visible ? `${200 + index * 80}ms` : "0ms" }}
+                            `}
                     >
                         {/* Hover glow */}
                         <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none

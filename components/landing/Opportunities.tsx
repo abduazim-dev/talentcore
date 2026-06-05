@@ -165,7 +165,7 @@ const Opportunities = () => {
     const currentFeatures = opportunities.find(tab => tab.id === activeTab)?.features ?? []
 
     return (
-        <section className="text-center pt-30 px-4">
+        <section id="imkoniyatlar" className="text-center pt-30 px-4">
             <p className="text-[#60A5FA] text-sm font-semibold uppercase tracking-widest">Imkoniyatlar</p>
             <h1 className="text-[28px] sm:text-[41px] font-extrabold mt-2">Sizga kerakli barcha HR vositalar</h1>
             <p className="text-[#7A8A9E] mt-4">Bir tizimda — maosh, ta'til, yollash, o'qish va ko'proq.</p>
