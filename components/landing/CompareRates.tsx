@@ -163,7 +163,7 @@ const CompareRates=()=> {
   }
 
   return (
-    <section id="taqqoslash" className="text-center py-16 px-4 md:py-24 md:px-8 max-w-[1160px] mx-auto">
+    <section id="taqqoslash" className="mt-12 text-center py-16 px-4 md:py-24 md:px-8 max-w-[1160px] mx-auto">
 
       <p className="text-[#60A5FA] text-sm font-semibold uppercase tracking-widest">Taqqoslash</p>
       <h2 className="text-[28px] sm:text-[41px] font-extrabold mt-2">Excel yoki Talentcore</h2>

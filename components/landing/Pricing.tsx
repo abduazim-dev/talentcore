@@ -84,19 +84,6 @@ const Pricing = () => {
                 Hamma tariflar uchun 3 oy bepul sinov.
             </p>
 
-            <div className="flex justify-center mt-6">
-                <div className="px-5 py-3 w-fit border flex flex-col sm:flex-row gap-3 sm:gap-8 items-center border-[#6366F140] bg-custom-gradient-muted rounded-xl">
-                    <span className="font-bold flex items-center justify-center px-4 h-7 rounded-full bg-custom-gradient-rgba text-sm whitespace-nowrap">
-                        🎉 EARLY ACCESS
-                    </span>
-                    <p className="text-[#7A8A9E] text-sm text-center sm:text-left">
-                        Hozir ro'yxatdan o'tsangiz birinchi{' '}
-                        <span className="text-[#C4B5FD] font-semibold">3 oy 20% chegirma</span>{' '}
-                        + barcha early access bonuslarni olasiz!
-                    </p>
-                </div>
-            </div>
-
             <div className="grid grid-cols-1 md:grid-cols-3 text-left px-0 sm:px-8 lg:px-16 mt-10 gap-5">
                 {teams.map(({ most, team, tariff, price, employes, opportunities }) => (
                     <div
