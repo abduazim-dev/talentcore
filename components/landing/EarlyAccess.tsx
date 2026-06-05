@@ -34,7 +34,7 @@ const bonuses: Bonus[] = [
     }
 ]
 
-const DEADLINE = new Date("2026-06-01T00:00")
+const DEADLINE = new Date("2026-09-01T00:00")
 
 type TimeLeft = {
     days: number
@@ -68,7 +68,7 @@ const EarlyAccess = () => {
             })
         }
         tick()
-    })
+    },[])
 
     return (
         <section ref={sectionRef} className="max-w-[1200px] mx-auto px-4 pt-30">
